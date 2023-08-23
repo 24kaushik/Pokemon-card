@@ -23,7 +23,7 @@ let themes = {
 
 
 const getData = () => {
-    let randNo = Math.floor(Math.random() * 300) + 1;
+    let randNo = Math.floor(Math.random() * 500) + 1;
     fetch(url + randNo)
         .then(response => response.json())
         .then((data) => {
