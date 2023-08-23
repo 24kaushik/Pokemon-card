@@ -9,16 +9,16 @@ let themes = {
     fairy: "#FF0069",
     fighting: "#30336b",
     fire: "#f0932b",
-    flying:"#81ecec",
-    grass:"#00b894",
-    ground:"#EFB549",
-    ghost:"#a55eea",
-    ice:"#74b9ff",
-    normal:"#95afc0",
-    poison:"#6c5ce7",
-    psychic:"#a29bfe",
-    rock:"#2d3436",
-    water:"#0190ff",
+    flying: "#81ecec",
+    grass: "#00b894",
+    ground: "#EFB549",
+    ghost: "#a55eea",
+    ice: "#74b9ff",
+    normal: "#95afc0",
+    poison: "#6c5ce7",
+    psychic: "#a29bfe",
+    rock: "#2d3436",
+    water: "#0190ff",
 }
 
 
@@ -50,23 +50,23 @@ const getData = () => {
             </div>
         </div>`;
 
-        appendTypes(data.types);
-        changeTheme(data.types);
+            appendTypes(data.types);
+            changeTheme(data.types);
         })
         .catch(err => console.error(err))
 }
 
-const appendTypes = (types)=>{
-    types.forEach(item=> {
+const appendTypes = (types) => {
+    types.forEach(item => {
         let span = document.createElement("span");
         span.textContent = item.type.name;
         document.querySelector(".types").appendChild(span)
     })
 }
 
-const changeTheme = (types)=>{
-    root.style.setProperty("--theme", themes[types[0].type.name] )
-    
+const changeTheme = (types) => {
+    root.style.setProperty("--theme", themes[types[0].type.name])
+
 }
 
 btn.addEventListener("click", (e) => {
